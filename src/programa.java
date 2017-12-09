@@ -24,7 +24,7 @@ public class programa {
         ordenar.mostrarArreglo(vector2);
         ordenar.mostrarArreglo(vector3);
         System.out.println("arreglo ordenado con quick ");
-        ordenar.quick(vector3,0,vector3.length-1);*/
+        ordenar.quick(vector3,0,vector3.length-1);
 
         int tam;
         tam=Integer.parseInt(JOptionPane.showInputDialog(null,"ingrese el tamaño del vector"));
@@ -33,8 +33,21 @@ public class programa {
             vectorcito[i]=Integer.parseInt(JOptionPane.showInputDialog(null,
                     "ingresa el elemento del indice"+i));
 
-            ordenar.inserccion(vectorcito,i+1);
+            ordenar.inserccion(vectorcito,i+1);*/
+
+        ordenar.mostrarArreglo(vector2);
+        ordenar.burbuja2(vector2);
+        ordenar.mostrarArreglo(vector2);
+
+        int indice=ordenar.busquedabinaria(vector2,2);
+        if (indice!=-1){
+            System.out.println("elemento 2 encontrado en el indice: " + indice);
+
+        }else{
+            System.out.println("elemento 2 no encontrado");
         }
+
+
 
 
 

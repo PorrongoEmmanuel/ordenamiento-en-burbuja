@@ -112,6 +112,43 @@ public class algoritmoOrdenamiento {
     }
 
 
+//METODO DE BUSQUEDA SECUENCIAL
+    public int busquedasecuencial(int arreglo [], int elemento){
+        int i;
+        boolean encontrado=false;
+        for(i=0; i<arreglo.length&& encontrado==false; i++){
+            if(elemento==arreglo[i]){
+                encontrado=true;
+                return i;
+
+            }
+        }
+        return -1;
+    }
+    // metodo de busqueda binaria
+    public int busquedabinaria(int []arreglo, int elemento){
+        int centro, primero, ultimo,valorcentro;
+        primero=0;
+        ultimo=arreglo.length-1;
+        while(primero<=ultimo){
+            centro=(primero+ultimo)/2;
+            valorcentro=arreglo[centro];
+            System.out.println("comparando a " +elemento+" con "+ arreglo[centro]);
+            if(elemento==valorcentro){
+                return  centro;
+            }else if(elemento<valorcentro){
+                ultimo=centro-1;//desplazarnos hacia la izquierda
+            }else{
+                primero=centro+1;//desplazarnos hacia la derecha
+            }
+
+        }
+        return -1;
+
+    }
+
+
+
     public void mostrarArreglo(int[]arreglo){
        int k=0;
        for(k=0; k<arreglo.length;k++){
